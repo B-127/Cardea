@@ -1,0 +1,59 @@
+import React,{Component} from "react";
+import axios from "axios";
+
+export default class CreateUsers extends Component{
+    //“Props” is a special keyword in React, which stands for properties and is being used for passing data from one component to another. “Props” is a special keyword in React, which stands for properties and is being used for passing data from one component to another.
+    constructor(props){
+        super(props);
+
+        this.onChangeUsername=this.onChangeUsername.bind(this);
+        this.onSubmit=this.onSubmit.bind(this);
+
+        this.state={
+            username:''
+        }
+    }
+
+    onChangeUsername(e){
+        this.setState({
+            username:e.target.value
+        })
+    }
+
+    onSubmit(e){
+        e.preventDefault(); //Prevents default action taken when submitting a form.
+
+        const user={
+            username:this.state.username
+        }
+
+        console.log(user);
+
+        axios.post('http://localhost:5000/users/add', user)
+            .then(res => console.log(res.data))
+
+        this.setState({
+            username:''
+        })
+
+    }
+
+    render(){
+        return(
+            <div>
+                <h3>Create New User</h3>
+                <form onSubmit={this.onSubmit}>
+                    <div className="form-group">
+                        <label>Username:</label>
+                        <input type="text" required onChange={this.onChangeUsername} className="form-control" value={this.state.username}/>
+                    </div>
+
+                    <div className="form-group">
+                        <input type="submit" className="btn btn-primary" value="Create User"/>
+                    </div>
+                </form>
+            </div>
+            
+        )
+    }
+} 
