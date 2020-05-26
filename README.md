@@ -15,6 +15,7 @@ DatePicker
 
 ## Built With
 
+* [Google Cloud Platform](https://cloud.google.com/) - Cloud Computing Services
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) - Cloud Database
 * [ExpressJS](https://expressjs.com/) - Web Application Framework
 * [ReactJS](https://reactjs.org/) - JavaScript library for building user interfaces
