@@ -21,7 +21,7 @@ DatePicker
 * [ReactJS](https://reactjs.org/) - JavaScript library for building user interfaces
 * [NodeJS](https://nodejs.org/en/) - JavaScript runtime environment
 
-## Authors
+## Author
 
 * **Tony Jesuthasan** [B-127](https://github.com/B-127)
 
