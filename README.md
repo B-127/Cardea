@@ -1,5 +1,5 @@
 # Cardea
-An Exercise Tracker built using the MERN stack
+An Exercise Tracker built using the MERN stack.
 
 ### Prerequisites
 
